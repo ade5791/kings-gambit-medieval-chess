@@ -146,6 +146,7 @@
         <tr><td class="k">F</td><td>Flip the camera to the other side</td></tr>
         <tr><td class="k">T</td><td>Toggle the tactical overhead view</td></tr>
         <tr><td class="k">C</td><td>Toggle cinema mode (hides the HUD)</td></tr>
+        <tr><td class="k">H</td><td>Toggle the move chronicle</td></tr>
         <tr><td class="k">Space</td><td>Pause / resume - showcase mode only</td></tr>
         <tr><td class="k">Escape</td><td>Close the settings panel</td></tr>
       </tbody>
@@ -153,7 +154,12 @@
     <p class="note">
       F, T, C and Space act only while a match is in play, and are ignored while
       typing in a field. Every binding above was read from the keydown handler in
-      the shipped source, not assumed.
+      the shipped source AND then confirmed in a real browser against the
+      published build by observing the state it changes - camera distance,
+      camera azimuth, tactical flag, HUD visibility or panel state. Drag-orbit
+      and scroll-zoom are OrbitControls behaviours and were measured the same
+      way (camera distance 10.51 -> 4.50 on scroll). Nothing on this page is
+      claimed from source inspection alone.
     </p>
   </section>
 
