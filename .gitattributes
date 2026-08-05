@@ -1,0 +1,13 @@
+# Byte fidelity for the S6 publish gate.
+#
+# This repository contains ONLY the gated production build. Every file here was
+# hashed after the QA gate passed, and the live site is verified byte-identical
+# against those hashes. Any line-ending normalisation between commit and
+# checkout would silently change the hash of every text asset - the JS bundle,
+# the CSS, index.html - and the live byte-identity check would then fail on
+# files that are in fact correct, or pass on files that are not.
+#
+# `* -text` disables ALL text conversion: git stores and checks out exactly the
+# bytes it was given. Combined with `core.autocrlf false` this makes the tree
+# hash recorded in docs/publish/PUBLISH.md a meaningful contract.
+* -text

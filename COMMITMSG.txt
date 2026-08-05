@@ -1,0 +1,18 @@
+Publish gated build: 4 civilisations, 4 battlegrounds, verified bytes
+
+Production vite build with PUBLIC_BASE=/kings-gambit-medieval-chess/.
+These bytes passed the full gate BEFORE being committed:
+
+  - typecheck clean; 99/99 unit tests pass
+  - 130/130 player-journey QA checks against these exact bytes,
+    across desktop, touch portrait, touch landscape, reduced motion
+  - zero console errors, zero page errors
+  - frame time on staged bytes: p50 16.8ms, p95 17.9ms, p99 19.2ms
+    on ANGLE / NVIDIA RTX 3090
+  - inventory: 100 files, 198322238 bytes, 90 model GLBs
+  - gated tree sha256:
+    256942f86f328c342764b5c9fd33e83fd13b1ac04834277d5ee17f7c352bb244
+
+core.autocrlf=false and .gitattributes (* -text) are set so git cannot
+rewrite the gated bytes between commit and checkout. .nojekyll is present
+so Pages serves the tree verbatim.
