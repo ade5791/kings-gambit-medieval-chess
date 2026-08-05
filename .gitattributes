@@ -7,6 +7,6 @@
 # ship subtly different bytes.
 #
 # `* -text` disables ALL text conversion: git stores and checks out exactly the
-# bytes it was given. Combined with `core.autocrlf false` this makes the tree
-# hash recorded in docs/publish/PUBLISH.md meaningful.
+# bytes it was given. Combined with `core.autocrlf false` this makes the hash
+# recorded in docs/publish/PUBLISH.md meaningful.
 * -text
